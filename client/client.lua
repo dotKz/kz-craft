@@ -69,8 +69,8 @@ end
 
 RegisterNetEvent("kz-crafting:client:craft")
 AddEventHandler("kz-crafting:client:craft", function(v)
-    exports['qbr-core']:TriggerCallback('kz-crafting:server:hasItem', function(y) 
-        if y then
+    exports['qbr-core']:TriggerCallback('kz-crafting:server:hasItem', function(has) 
+        if has then
             exports['qbr-core']:Progressbar("craft", "Craft en cours", v.info.time, false, true, {
                 disableMovement = true,
                 disableCarMovement = false,
@@ -78,10 +78,10 @@ AddEventHandler("kz-crafting:client:craft", function(v)
                 disableCombat = true,
             }, {}, {}, {}, function() end)
             Wait(v.info.time)
-            TriggerServerEvent('kz-crafting:server:craft', v.info.Recipe, v.info.craftedItem, v.info.count)
+            TriggerServerEvent('kz-crafting:server:craft', v.info.Recipe, v.info.craftedItem, v.info.count, v.info)
             ClearPedTasks(PlayerPedId())
         end
-    end, v.info.Recipe)
+    end, v.info.Recipe, v.info)
 end)
 
 RegisterNetEvent("kz-crafting:client:closemenu")

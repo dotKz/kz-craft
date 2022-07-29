@@ -24,6 +24,8 @@ Config.Craft = {
                     craftedItem = "firstaid", -- Item to craft
                     count = 1, -- Number of item
                     time = 1000, -- 1000 = 1sec
+                    reqcraftingrep = 10,
+                    addcraftingrep = 1,
                     Recipe = { 
                         [1] = {reqitem = "bandage", count = 1},
                         [2] = {reqitem = "painkillers", count = 1}
@@ -35,6 +37,8 @@ Config.Craft = {
                     craftedItem = "painkillers", -- Item to craft
                     count = 5, -- Number of item
                     time = 1000, -- 1000 = 1sec
+                    reqcraftingrep = 0,
+                    addcraftingrep = 1,
                     Recipe = { 
                         [1] = {reqitem = "blueberry", count = 1},
                         [2] = {reqitem = "water_bottle", count = 1}
@@ -65,6 +69,8 @@ Config.Craft = {
                     craftedItem = "sandwich", -- Item to craft
                     count = 2, -- Number of item
                     time = 1000, -- 1000 = 1sec
+                    reqcraftingrep = 0,
+                    addcraftingrep = 1,
                     Recipe = { 
                         [1] = {reqitem = "bread", count = 1},
                         [2] = {reqitem = "game", count = 1}
@@ -76,6 +82,8 @@ Config.Craft = {
                     craftedItem = "cigar", -- Item to craft
                     count = 1, -- Number of item
                     time = 1000, -- 1000 = 1sec
+                    reqcraftingrep = 0,
+                    addcraftingrep = 1,
                     Recipe = { 
                         [1] = {reqitem = "cigarette", count = 3},
                     }
