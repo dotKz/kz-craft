@@ -12,6 +12,8 @@
 
 <strong>You just need to edit config.lua</strong>
 
+<i>There are not many translations to do</i>
+
 <strong>Requirement :</strong>
 - qbr-menu
 - qbr-inventory
