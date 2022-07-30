@@ -10,7 +10,7 @@ exports['qbr-core']:CreateCallback('kz-crafting:server:hasItem', function(source
 	local Playercid = Player.PlayerData.citizenid
     local cc = 0
     for i = 1, #Recipe do
-        if Player.Functions.GetItemByName(Recipe[i].reqitem) and Player.Functions.GetItemByName(Recipe[i].reqitem).amount >= Recipe[i].count and Player.PlayerData.metadata['metaweight'] >= base.reqcraftingrep then
+        if Player.Functions.GetItemByName(Recipe[i].reqitem) and Player.Functions.GetItemByName(Recipe[i].reqitem).amount >= Recipe[i].count and Player.PlayerData.metadata['craftingrep'] >= base.reqcraftingrep then
             cc = cc + 1
         else
             TriggerClientEvent('QBCore:Notify', src, 9, "Vous n'avez pas les ressources / la réputation nécessaires.", 2000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
